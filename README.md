@@ -1,86 +1,43 @@
-# Next Starter Kit
+## Ibrahim Megahed
 
-A pre-configured Next.js template for faster project setup.
+### About Me
 
-## Features
+> -- Formerly [@hima-pro](https://github.com/Hima-Pro) & Founder of [@o-studio](https://github.com/o-studio) | >> [Free Palestine](https://palestinecampaign.org) <img
+>   src="https://flagcdn.com/ps.svg"
+>   width="25"
+>   alt="Palestine">
 
-- [Bun](https://bun.sh) - A fast JavaScript all-in-one toolkit.
-- [NextJS](https://nextjs.org) - Full-Stack React framework.
-- [Mantine UI](https://mantine.dev) - Awesome React component library.
-- [Iconify](https://icon-sets.iconify.design) - Largest vector icons library.
-- [SASS](https://sass-lang.com) - Syntactically Awesome Style Sheets.
-- [Typescript](https://typescriptlang.org) - JavaScript with syntax for types.
-- [Zod](https://zod.dev) - TypeScript-first schema validation with types.
-- [Pocketbase](http://pocketbase.io) - Open Source realtime backend in 1 file.
-- [Dev Container](https://containers.dev) - Sandboxed development process.
-- [Docker](https://www.docker.com) - Awesome project deployment tool.
-- [Workflow](https://github.com/features/actions) - Github Actions CI builds.
+Hi, I'm Ibrahim M. A. Megahed, a multi-passion persion with medicne knowledge and software developing innovative skills. I've been in the tech industry since 2018, working on a wide range of projects from web applications, servers and back-end software. I speak English, Russian and Arabic as a native speaker, I'm a medical student at The Egyption Assiut National University.
 
-## Get Started
+With a self-taught foundation in [programming languages, frameworks, or technologies], I've honed my skills to deliver high-quality code that meets the needs of real-world applications.
 
-Clone template
+I usualy build software for my self, frinds or education. When i'm not coding, you can find me learning medcine as a student-doctor, exploring open-source projects. I'm always eager to collaborate with like-minded individuals who share my passion for tech and innovation.
 
-```bash
-git clone https://github.com/cto4/next-kit.git
-```
+Feel free to reach out if you'd like to chat about a project idea, get feedback on my/your code, or simply grab a coffee and discuss the latest tech trends!
 
-Install deps
+### Contact Me
 
-```bash
-npm i
-```
+- Email : [admin@cto4.ru](mailto:admin@cto4.ru)
+- Facebook: [@cto4ru](https://fb.com/cto4ru)
+- LinkedIn: [@cto4](https://linkedin.com/in/cto4)
+- Telegram: [@cto4ru](https://t.me/cto4ru)
+- X : [@cto4ru](https://x.com/cto4ru)
 
-## Avilable scripts
+### Skills
 
-- `dev` - next dev
-- `build` - next build
-- `bundle` - standalone bundle
-- `start` - next start
-- `type-check` - fast type check with tsc
+- Code languages: HTML, CSS, JavaScript, Typescript, PHP, Docker, GoLang.
+- Databases: MySQL, MongoDB, PostgreSQL, SQLite, Pocketbase, GraphQL(s).
+- Tools & Frameworks: VSCode, GIT, Vite, NextJS, SASS, Drizzle, Mantine UI, ADB, more...
+- Desktop: Windows 10, Linux(#), Debian, Gnome.
 
-## Project structure
+### GitHub Stats
 
-```yml
-├── app # next app router
-│   ├── about
-│   │   └── page.tsx # page #2
-│   ├── layout.tsx # root layout
-│   ├── not-found.tsx
-│   └── page.tsx # page #1
-├── Dockerfile # docker logic
-├── next.config.mjs # customize next
-├── package.json # project defintion
-├── src # project source
-│   ├── assets # static files
-│   │   ├── images # banners, logos etc...
-│   │   ├── res # json, xml etc...
-│   │   └── styles # scss
-│   ├── components # react parts
-│   ├── hooks # front-end logic
-│   └── lib # back-end logic
-│       ├── actions # next server actions
-│       ├── db # pocketbase
-│       └── utils # extra logic
-├── .env # env variables
-└── tsconfig.json # compiler options
-```
+![GitHub Stats](https://github-readme-stats.vercel.app/api/?username=cto4&show_icons=true&count_private=true)
 
-## Deploy
+### Languages
 
-- [Docker](https://www.docker.com) - recommended
-- [Vercel](https://vercel.com) with [Pockethost](https://pockethost.io)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cto4&layout=compact&langs_count=6)
 
-## ToDo
-- add i18n
-- add eslint
-- add next auth
-- add testing
+### License
 
-## Contribution guide
-
-- Any contributions must be proposed via a GitHub issue for discussion before being worked on.
-- You should also use git commit -s and follow the [DCO](https://developercertificate.org).
-
-## License
-
-[MIT License](https://github.com/cto4/next-kit/blob/main/LICENSE)
+MIT License
