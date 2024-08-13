@@ -1,0 +1,7 @@
+[
+  { "label": "Home", "icon": "solar:home-smile-angle-bold-duotone", "href": "/" },
+  { "label": "About", "icon": "solar:user-rounded-bold-duotone", "href": "/about" },
+  { "label": "Contact", "icon": "ph:envelope-simple-duotone", "href": "/contact" },
+  { "label": "Projects", "icon": "solar:sidebar-code-line-duotone", "href": "/projects" },
+  { "label": "Skills", "icon": "eos-icons:atom-electron", "href": "/skills" }
+]

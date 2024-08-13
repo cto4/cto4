@@ -1,0 +1,26 @@
+{
+  "name": "node-env",
+  "image": "tdim/devbox:node",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "remoteUser": "node",
+  "runArgs": ["--privileged"],
+  "postCreateCommand": ["/app/node/entrypoint.sh"],
+  "containerEnv": {
+    "PB": "http://127.0.0.1:8090"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "fish"
+      },
+      "extensions": [
+        "antfu.iconify",
+        "dbaeumer.vscode-eslint",
+        "dsznajder.es7-react-js-snippets",
+        "esbenp.prettier-vscode",
+        "mrmlnc.vscode-scss"
+      ]
+    }
+  }
+}
