@@ -1,19 +1,22 @@
 import Head from "next/head";
+import { cookies } from "next/headers";
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
+import LayoutX from "#c/LayoutX";
+
 import "@mantine/core/styles.css";
 import "#a/styles/globals.scss";
 
-const theme = createTheme({
-  fontFamily: "Open Sans, sans-serif",
-  primaryColor: "blue",
-});
-
 export const metadata = {
-  title: "Next App",
-  description: "a simple next app with mantine",
+  title: "Hima Pro",
+  description: "Ibrahim Megahed - @cto4 personal website.",
 };
 
-const layout = ({ children }) => {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+  const theme = createTheme({
+    fontFamily: "Open Sans, sans-serif",
+    primaryColor: "yellow",
+  });
+  const Co = cookies();
 
   return (
     <html lang="en">
@@ -24,12 +27,12 @@ const layout = ({ children }) => {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no" />
       </Head>
       <body>
-        <MantineProvider theme={theme} defaultColorScheme="auto">
-          {children}
+        <MantineProvider theme={theme} defaultColorScheme={(Co.get("color-scheme")?.value as any) ?? "auto"}>
+          <LayoutX wideOpen={Co.get("wide-open")?.value}>{children}</LayoutX>
         </MantineProvider>
       </body>
     </html>
   );
 };
 
-export default layout;
+export default RootLayout;

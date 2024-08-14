@@ -1,11 +1,11 @@
 export const metadata = {
-  title: "About | Hima Pro",
+  title: "Contact | Hima Pro",
 };
 
 const page = () => {
   return (
     <>
-      <h1>about</h1>
+      <h1>Contact</h1>
     </>
   );
 };
