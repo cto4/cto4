@@ -1,0 +1,32 @@
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  @include smaller-than(767px) {
+    grid-template-columns: 1fr;
+  }
+  & .banner {
+    width: 100%;
+    object-fit: cover;
+  }
+  & h3,
+  & p {
+    color: var(--mantine-color-text);
+  }
+}
+
+.empty {
+  @include smaller-than(767px){
+    align-items: start !important;
+    height: auto !important;
+  }
+}
+
+.pages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  & a {
+    border-radius: 5px;
+  }
+}

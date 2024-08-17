@@ -1,12 +1,15 @@
 "use client";
+import Link from "next/link";
+import { useEffect } from "react";
+import { Icon } from "@iconify/react";
 import { ActionIcon, AppShell, Container, Flex, Group, rem, Text } from "@mantine/core";
 import { useDisclosure, useHeadroom } from "@mantine/hooks";
-import { Icon } from "@iconify/react";
-import NavBar from "./NavBar";
-import Affix from "./Affix";
-import ThemeSwitcher from "./ThemeSwitcher";
 import Cookies from "universal-cookie";
-import { useEffect } from "react";
+
+import Affix from "./Affix";
+import NavBar from "./NavBar";
+import ThemeSwitcher from "./ThemeSwitcher";
+import Footer from "./Footer";
 
 const LayoutX = ({ children, wideOpen }: { children: React.ReactNode; wideOpen?: string }) => {
   const Co = new Cookies();
@@ -51,17 +54,22 @@ const LayoutX = ({ children, wideOpen }: { children: React.ReactNode; wideOpen?:
             <Flex h="100%" align="center" gap={10}>
               {wMenu}
               {mMenu}
-              <Text size="20px">Hima Pro</Text>
+              <Text component={Link} href="/" size="20px">
+                Hima Pro
+              </Text>
             </Flex>
             <ThemeSwitcher />
           </Group>
         </Container>
       </AppShell.Header>
-      <AppShell.Navbar style={blur} px="md">
+      <AppShell.Navbar style={blur} zIndex={222} px="md" pb="md">
         <NavBar menu={mMenu} close={mHandlers.close} />
       </AppShell.Navbar>
-      <AppShell.Main pt={`calc(${rem(60)} + var(--mantine-spacing-md))`}>
-        <Container style={{ width: "100%", maxWidth: "1000px" }}>{children}</Container>
+      <AppShell.Main pt={`calc(${rem(60)} + 30px)`}>
+        <Container style={{ width: "100%", maxWidth: "1000px" }}>
+          {children}
+          <Footer />
+        </Container>
         <Affix />
       </AppShell.Main>
     </AppShell>

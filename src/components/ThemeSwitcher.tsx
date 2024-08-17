@@ -1,15 +1,16 @@
 "use client";
-import { Icon, IconifyIcon } from "@iconify/react";
-import { ActionIcon, Group, SegmentedControl, Stack, Text, useMantineColorScheme } from "@mantine/core";
-import Cookies from "universal-cookie";
 import dynamic from "next/dynamic";
+import { Icon, IconifyIcon } from "@iconify/react";
+import { ActionIcon, SegmentedControl, Stack, Text, useMantineColorScheme } from "@mantine/core";
+import Cookies from "universal-cookie";
 
 type ThemeSwitcherProps = {
   wide?: boolean;
   fullWidth?: boolean;
+  noLabel?: boolean;
 };
 
-const ThemeSwitcher = ({ wide, fullWidth }: ThemeSwitcherProps) => {
+const ThemeSwitcher = ({ wide, fullWidth, noLabel }: ThemeSwitcherProps) => {
   const { colorScheme, setColorScheme } = useMantineColorScheme();
   const Co = new Cookies();
 
@@ -19,7 +20,7 @@ const ThemeSwitcher = ({ wide, fullWidth }: ThemeSwitcherProps) => {
     label: (
       <Stack align="center" gap={5}>
         <Icon height={20} icon={icon} />
-        <Text h={20}>{title}</Text>
+        {noLabel ? <></> : <Text h={20}>{title}</Text>}
       </Stack>
     ),
   });
@@ -35,8 +36,7 @@ const ThemeSwitcher = ({ wide, fullWidth }: ThemeSwitcherProps) => {
 
   return wide ? (
     <SegmentedControl
-      my="md"
-      size="xl"
+      size="md"
       fullWidth={fullWidth}
       data={schemes}
       value={colorScheme}

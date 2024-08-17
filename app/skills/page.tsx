@@ -1,3 +1,9 @@
+import { Icon } from "@iconify/react";
+import { Card, Stack, Text, Title } from "@mantine/core";
+
+import classes from "./styles.module.scss";
+import skills from "./skills.json";
+
 export const metadata = {
   title: "Skills | Hima Pro",
 };
@@ -5,7 +11,27 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <h1>Skills</h1>
+      <Title order={1} my={0}>
+        Skills
+      </Title>
+      <Text c="dimmed" size="lg">
+        Here you can see my skills and the software I use usually.
+      </Text>
+      <div className={classes.skillsContainer}>
+        <div className={classes.skillsBox}>
+          {skills.map(async (skill, index) => (
+            <Card component={Stack} align="center" gap={5} p="xl" withBorder shadow="sm" key={index}>
+              <Icon width={80} height={80} icon={skill.icon} />
+              <Title order={4} ta="center">
+                {skill.name}
+              </Title>
+              <Text c="dimmed" ta="center" size="sm" visibleFrom="xs">
+                {skill.description}
+              </Text>
+            </Card>
+          ))}
+        </div>
+      </div>
     </>
   );
 };

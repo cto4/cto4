@@ -1,11 +1,11 @@
 "use client";
-import { AppShell, Divider, Flex, ScrollArea, Text, Stack, NavLink, ActionIcon } from "@mantine/core";
-
-import pages from "#a/res/pages.json";
-import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { AppShell, Divider, Flex, ScrollArea, Text, Stack, NavLink, ActionIcon } from "@mantine/core";
+import { Icon } from "@iconify/react";
+
 import ThemeSwitcher from "./ThemeSwitcher";
+import pages from "#a/res/pages.json";
 
 type NavBarProps = {
   menu: React.ReactNode;
