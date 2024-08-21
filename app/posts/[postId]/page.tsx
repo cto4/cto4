@@ -21,10 +21,19 @@ import EmptyBox from "#c/EmptyBox";
 export const revalidate = 0;
 
 const page = async ({ params }) => {
-  const { postId } = params;
-  const post = await pb.collection("posts").getOne(postId, {
-    expand: "author",
+
+  const post = await new Promise<any>(async (resolve) => {
+    try {
+      resolve(await pb.collection("posts").getOne(params?.postId, { expand: "author" }));
+    } catch (error) {
+      resolve(error);
+    }
   });
+
+  if (post?.status) {
+    return <EmptyBox title="Post not Found !" description="Can not get requested post." />;
+  }
+
   const author = post.expand.author;
   const banner = process.env.POCKETBASE + `/api/files/posts/${post.id}/${post.banner}?thumb=0x200f`;
   const avatar = process.env.POCKETBASE + `/api/files/users/${author.id}/${author.avatar}?thumb=0x50f`;
@@ -73,7 +82,7 @@ const page = async ({ params }) => {
         <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
       </Card>
       <Card withBorder shadow="sm" radius={10} mt={20} bg="#ffffff">
-        <Comments postId={postId} title={post.title} />
+        <Comments postId={params?.postId} title={post.title} />
       </Card>
     </>
   );

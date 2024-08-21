@@ -14,23 +14,20 @@ const EmptyBox = ({ className = null, title = "Empty !", description = "Sorry we
       <Flex className={className} justify="center" align={match ? "start" : "center"} h={match ? "auto" : 400}>
         <div>
           <Title order={2}>{title}</Title>
-          <Text c="dimmed">{description} Please visit the other pages no learn more about us.</Text>
+          <Text c="dimmed">{description} Please visit the other pages to learn more about us.</Text>
           <Divider my={20} />
           <SimpleGrid cols={2}>
-            {pages.map(
-              (page, index) =>
-                page.label !== "Home" && (
-                  <NavLink
-                    active
-                    key={index}
-                    variant="light"
-                    component={Link}
-                    label={page.label}
-                    href={page.href}
-                    leftSection={<Icon height={25} icon={page.icon} />}
-                  />
-                )
-            )}
+            {pages.map((page, index) => (
+              <NavLink
+                active
+                key={index}
+                variant="light"
+                component={Link}
+                label={page.label}
+                href={page.href}
+                leftSection={<Icon height={25} icon={page.icon} />}
+              />
+            ))}
           </SimpleGrid>
         </div>
       </Flex>
