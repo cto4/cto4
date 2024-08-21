@@ -5,7 +5,7 @@ import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
 import LayoutX from "#c/LayoutX";
 
-import logo from "#a/images/logo.svg";
+import logo from "#a/images/logo-512.png";
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import "#a/styles/globals.scss";
