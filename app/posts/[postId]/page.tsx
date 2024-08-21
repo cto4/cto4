@@ -1,6 +1,3 @@
-import pb from "#/lib/db";
-import Comments from "#c/Comments";
-import EmptyBox from "#c/EmptyBox";
 import {
   Anchor,
   Avatar,
@@ -16,6 +13,10 @@ import {
   TypographyStylesProvider,
 } from "@mantine/core";
 import Link from "next/link";
+
+import pb from "#/lib/db";
+import Comments from "#c/Comments";
+import EmptyBox from "#c/EmptyBox";
 
 export const revalidate = 0;
 

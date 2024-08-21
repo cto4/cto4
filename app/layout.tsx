@@ -14,10 +14,10 @@ export const metadata: Metadata = {
   title: "Hima Pro",
   description: "Ibrahim Megahed - @cto4 personal website.",
   icons: logo.src,
-  metadataBase: new URL("https://cto.ru"),
+  metadataBase: new URL("https://hima-pro.ru"),
   openGraph: {
     type: "website",
-    url: "https://cto4.ru",
+    url: "https://hima-pro.ru",
     title: "Hima Pro",
     description: "Ibrahim Megahed - @cto4 personal website.",
     siteName: "Hima Pro",

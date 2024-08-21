@@ -54,7 +54,7 @@ const page = () => {
                 active
                 label="Contact"
                 href="/contact"
-                variant="light"
+                variant="filled"
                 visibleFrom="sm"
                 component={Link}
                 className={classes.mainLink}

@@ -1,12 +1,12 @@
+import { Suspense } from "react";
+import { redirect } from "next/navigation";
+import { Title, Group, Text, Box, Card, Flex, Divider, NavLink, Button, LoadingOverlay } from "@mantine/core";
 import { Icon } from "@iconify/react";
-import { Title, Group, Text, Box, Card, Flex, Badge, Divider, NavLink, Button, LoadingOverlay } from "@mantine/core";
 
 import classes from "./styles.module.scss";
 import GithubAPI from "#/lib/actions/GithubAPI";
 import Controls from "#c/Controls";
 import EmptyBox from "#c/EmptyBox";
-import { Suspense } from "react";
-import { redirect } from "next/navigation";
 
 export const metadata = {
   title: "Projects | Hima Pro",
@@ -20,7 +20,8 @@ const page = async ({ searchParams }) => {
     ? searchParams.sort
     : "updated";
   const api = await GithubAPI({
-    username: "Hima-Pro",
+    username: process.env.GH_USER ?? "Hima-Pro",
+    per_page: parseInt(process.env.PROJECTS_PER_PAGE ?? "10"),
     page,
     sort,
   });
@@ -85,9 +86,16 @@ const page = async ({ searchParams }) => {
                 )}
                 <Divider mb={10} />
                 <Group grow>
-                  <NavLink target="_blank" ta="center" variant="light" active label="Source Code" href={repo.url} />
+                  <NavLink target="_blank" ta="center" variant="filled" active label="Source Code" href={repo.url} />
                   {repo.homepage ? (
-                    <NavLink target="_blank" ta="center" variant="light" active label="Home Page" href={repo.homepage} />
+                    <NavLink
+                      target="_blank"
+                      ta="center"
+                      variant="filled"
+                      active
+                      label="Home Page"
+                      href={repo.homepage}
+                    />
                   ) : null}
                 </Group>
               </Card>

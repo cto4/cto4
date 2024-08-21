@@ -2,18 +2,15 @@
 
 ### About Me
 
-> -- Formerly [@hima-pro](https://github.com/Hima-Pro) & Founder of [@o-studio](https://github.com/o-studio) | >> [Free Palestine](https://palestinecampaign.org) <img
->   src="https://flagcdn.com/ps.svg"
->   width="25"
->   alt="Palestine">
+> -- Formerly [@hima-pro](https://github.com/Hima-Pro) & Founder of [@o-studio](https://github.com/o-studio) | >> [Free Palestine](https://palestinecampaign.org) <img src="https://flagcdn.com/ps.svg" width="25" alt="Palestine">
 
-Hi, I'm Ibrahim M. A. Megahed, a multi-passion persion with medicne knowledge and software developing innovative skills. I've been in the tech industry since 2019, working on a wide range of projects from web applications, servers and back-end software. I speak English, Russian and Arabic as a native speaker, I'm a medical student at The Egyption Assiut National University.
+Hi, I'm Ibrahim M. A. Megahed, a multi-passion persion with medicne knowledge and software developing innovative skills. I've been in the tech industry since 2019, working on a wide range of projects from web applications, servers and back-end software. I speak Arabic as a native speaker, English and Russian. I'm a medical student at The Egyption Assiut National University.
 
-With a self-taught foundation in [programming languages, frameworks, or technologies], I've honed my skills to deliver high-quality code that meets the needs of real-world applications.
+With a self-taught foundation in [programming languages, frameworks, and technologies], I've honed my skills to deliver high-quality code that meets the needs of real-world applications.
 
-I usualy build software for my self, frinds or education. When i'm not coding, you can find me learning medcine as a student-doctor, exploring open-source projects. I'm always eager to collaborate with like-minded individuals who share my passion for tech and innovation.
+I usualy build software for my self, frinds even for my education. When i'm not coding, you may find me learning medcine as a student-doctor, exploring open-source projects. I always eager to collaborate with like-minded individuals who share my passion for tech and innovation.
 
-Feel free to reach out if you'd like to chat about a project idea, get feedback on my/your code, or simply grab a coffee and discuss the latest tech trends!
+Feel free to reach out if you'd like to chat about a project idea, get feedback on my/your code, or simply grab a coffee and lets discuss the latest tech trends!
 
 ### Contact Me
 
