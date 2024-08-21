@@ -15,7 +15,7 @@ const Footer = () => {
       <Divider />
       <Flex align="center" justify="space-between">
         <Group>
-          <Image h={40} src={logo.src} visibleFrom="sm" />
+          <Image h={40} src={logo.src} alt="Hima Pro logo" visibleFrom="sm" />
           <Title order={3} fz={30} >Hima Pro</Title>
         </Group>
         <ActionIconGroup>
@@ -36,7 +36,7 @@ const Footer = () => {
       </Flex>
       <Divider />
       <Flex align="center" justify="space-between">
-        <Text>Copyright &copy; 2018 - {new Date().getFullYear()} Hima-Pro.</Text>
+        <Text>Copyright &copy; 2019 - {new Date().getFullYear()} Hima-Pro.</Text>
         <ThemeSwitcher wide={!match} noLabel />
       </Flex>
     </Stack>

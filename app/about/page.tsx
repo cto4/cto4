@@ -46,9 +46,9 @@ const page = () => {
           <CanvasBG className={classes.banner} geometry={[1185, 420]} spacing={5} />
         </CardSection>
         <div className={classes.user}>
-          <Image src={me.src} />
-          <div className={classes.info}>
-            <h1>Ibrahim Megahed</h1>
+          <Image src={me.src} alt="Me" />
+          <Stack className={classes.info}>
+            <Title order={1}>Ibrahim Megahed</Title>
             <Flex>
               <NavLink
                 active
@@ -73,7 +73,7 @@ const page = () => {
                 </Anchor>
               ))}
             </Flex>
-          </div>
+          </Stack>
         </div>
       </Card>
       <Quote />

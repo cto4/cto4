@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { Card, Stack, Text, Title } from "@mantine/core";
+import { Card, Group, Stack, Text, Title } from "@mantine/core";
 
 import classes from "./styles.module.scss";
 import skills from "./skills.json";
@@ -11,8 +11,9 @@ export const metadata = {
 const page = () => {
   return (
     <>
-      <Title order={1} my={0}>
-        Skills
+      <Title component={Group} order={1} my={0}>
+        <Icon icon="eos-icons:atom-electron" />
+        My Skills
       </Title>
       <Text c="dimmed" size="lg">
         Here you can see my skills and the software I use usually.

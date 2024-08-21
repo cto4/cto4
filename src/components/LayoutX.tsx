@@ -30,13 +30,13 @@ const LayoutX = ({ children, wideOpen }: { children: React.ReactNode; wideOpen?:
   };
 
   const mMenu = (
-    <ActionIcon onClick={mHandlers.toggle} variant="subtle" color="gray" size="lg" hiddenFrom="sm">
+    <ActionIcon aria-label="Menu" onClick={mHandlers.toggle} variant="subtle" color="gray" size="lg" hiddenFrom="sm">
       <Icon height={25} icon={"mdi:menu-" + (mOpened ? "open" : "close")} />
     </ActionIcon>
   );
 
   const wMenu = (
-    <ActionIcon onClick={wHandlers.toggle} variant="subtle" color="gray" size="lg" visibleFrom="sm">
+    <ActionIcon aria-label="Menu" onClick={wHandlers.toggle} variant="subtle" color="gray" size="lg" visibleFrom="sm">
       <Icon height={25} icon={"mdi:menu-" + (wOpened ? "open" : "close")} />
     </ActionIcon>
   );
@@ -48,8 +48,8 @@ const LayoutX = ({ children, wideOpen }: { children: React.ReactNode; wideOpen?:
 
   return (
     <AppShell layout="alt" padding="md" {...shellProps}>
-      <AppShell.Header>
-        <Container h="100%" style={{ width: "100%", maxWidth: "1000px" }}>
+      <AppShell.Header px={20}>
+        <Container h="100%" p={0} style={{ width: "100%", maxWidth: "1000px" }}>
           <Group h="100%" justify="space-between" gap={10}>
             <Flex h="100%" align="center" gap={10}>
               {wMenu}
@@ -62,11 +62,11 @@ const LayoutX = ({ children, wideOpen }: { children: React.ReactNode; wideOpen?:
           </Group>
         </Container>
       </AppShell.Header>
-      <AppShell.Navbar style={blur} zIndex={222} px="md" pb="md">
+      <AppShell.Navbar style={blur} zIndex={999} px="md" pb="md">
         <NavBar menu={mMenu} close={mHandlers.close} />
       </AppShell.Navbar>
       <AppShell.Main pt={`calc(${rem(60)} + 30px)`}>
-        <Container style={{ width: "100%", maxWidth: "1000px" }}>
+        <Container p={0} style={{ width: "100%", maxWidth: "1000px" }}>
           {children}
           <Footer />
         </Container>

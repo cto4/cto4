@@ -28,7 +28,7 @@ const Affix = () => {
 
   return (
     <>
-      <MAffix position={{ bottom: 20, right: matches ? "20px" : "calc(50% - 85px)" }}>
+      <MAffix zIndex={500} position={{ bottom: 20, right: matches ? "20px" : "calc(50% - 85px)" }}>
         <Transition transition="slide-up" mounted={progress > 0}>
           {(transitionStyles) => (
             <Button.Group style={transitionStyles} orientation={matches ? "vertical" : "horizontal"}>

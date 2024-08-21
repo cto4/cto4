@@ -1,0 +1,7 @@
+[
+  { "label": "+201092726914", "href": "https://wa.me/201092726914", "icon": "mdi:whatsapp" },
+  { "label": "+201092726914", "href": "tel:+201092726914", "icon": "solar:call-chat-bold-duotone" },
+  { "label": "@cto4ru", "href": "https://t.me/cto4ru", "icon": "mdi:telegram" },
+  { "label": "tdim.dev@gmail.com", "href": "mailto:tdim.dev@gmail.com", "icon": "ph:envelope-simple-duotone" },
+  { "label": "Al Subihi, Al Shawashna, Faiyum Governorate 63624", "href": "https://maps.app.goo.gl/N4VvfqyWLsGUnytMA", "icon": "mdi:map-marker" }
+]

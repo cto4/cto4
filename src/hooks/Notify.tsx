@@ -6,7 +6,7 @@ import { Icon, IconifyIcon } from "@iconify/react";
 interface NotifyProps {
   title: React.ReactNode;
   message: React.ReactNode;
-  color: DefaultMantineColor;
+  color?: DefaultMantineColor;
   icon: string | IconifyIcon;
 }
 

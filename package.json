@@ -14,7 +14,9 @@
     "@mantine/form": "^7.11.2",
     "@mantine/hooks": "^7.11.2",
     "@mantine/notifications": "^7.11.2",
+    "@octokit/rest": "^21.0.2",
     "cross-env": "^7.0.3",
+    "disqus-react": "^1.1.5",
     "mantine-form-zod-resolver": "^1.1.0",
     "next": "^14.2.5",
     "pocketbase": "^0.21.4",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^5.0.2",
+    "@octokit/types": "^13.5.0",
     "@types/bun": "^1.1.6",
     "@types/node": "^22.0.0",
     "@types/react": "^18.3.3",

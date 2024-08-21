@@ -1,0 +1,33 @@
+.contactContainer {
+  container: contact / inline-size;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+.links {
+  padding: 20px;
+  width: 350px;
+  background-size: cover !important;
+  color: #ffffff;
+  & a {
+    color: #ffffff;
+    border: 1px solid var(--mantine-color-dark-light);
+    border-radius: 5px;
+    &:hover {
+      background: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+}
+
+@container contact (width < 767px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+  .links {
+    width: 100%;
+  }
+}

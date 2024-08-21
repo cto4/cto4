@@ -34,7 +34,7 @@ const NavBar = ({ menu, close }: NavBarProps) => {
               {...{ href, label, onClick: close }}
               style={{ borderRadius: 10 }}
               leftSection={
-                <ActionIcon variant="transparent" color={pathname == href ? null : "gray"} size="lg">
+                <ActionIcon aria-label={`${label} icon`} variant="transparent" color={pathname == href ? null : "gray"} size="lg">
                   <Icon height={25} icon={icon} />
                 </ActionIcon>
               }

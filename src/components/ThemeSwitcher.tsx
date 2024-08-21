@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 import { Icon, IconifyIcon } from "@iconify/react";
-import { ActionIcon, SegmentedControl, Stack, Text, useMantineColorScheme } from "@mantine/core";
+import { ActionIcon, SegmentedControl, Stack, Text, useMantineColorScheme, VisuallyHidden } from "@mantine/core";
 import Cookies from "universal-cookie";
 
 type ThemeSwitcherProps = {
@@ -19,8 +19,9 @@ const ThemeSwitcher = ({ wide, fullWidth, noLabel }: ThemeSwitcherProps) => {
     value: title.toLowerCase(),
     label: (
       <Stack align="center" gap={5}>
-        <Icon height={20} icon={icon} />
+        <Icon aria-labelledby="Switcher" height={20} icon={icon} />
         {noLabel ? <></> : <Text h={20}>{title}</Text>}
+        <VisuallyHidden>{title}</VisuallyHidden>
       </Stack>
     ),
   });
@@ -40,6 +41,7 @@ const ThemeSwitcher = ({ wide, fullWidth, noLabel }: ThemeSwitcherProps) => {
       fullWidth={fullWidth}
       data={schemes}
       value={colorScheme}
+      aria-label="Theme Switcher"
       onChange={(newScheme: any) => {
         Co.set("color-scheme", newScheme);
         setColorScheme(newScheme);
@@ -50,6 +52,7 @@ const ThemeSwitcher = ({ wide, fullWidth, noLabel }: ThemeSwitcherProps) => {
       size="lg"
       color="gray"
       variant="subtle"
+      aria-label="Theme Switcher"
       onClick={() => {
         const newScheme: any = schemes[(index + 1) % 3];
         Co.set("color-scheme", newScheme.value);

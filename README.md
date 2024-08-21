@@ -7,7 +7,7 @@
 >   width="25"
 >   alt="Palestine">
 
-Hi, I'm Ibrahim M. A. Megahed, a multi-passion persion with medicne knowledge and software developing innovative skills. I've been in the tech industry since 2018, working on a wide range of projects from web applications, servers and back-end software. I speak English, Russian and Arabic as a native speaker, I'm a medical student at The Egyption Assiut National University.
+Hi, I'm Ibrahim M. A. Megahed, a multi-passion persion with medicne knowledge and software developing innovative skills. I've been in the tech industry since 2019, working on a wide range of projects from web applications, servers and back-end software. I speak English, Russian and Arabic as a native speaker, I'm a medical student at The Egyption Assiut National University.
 
 With a self-taught foundation in [programming languages, frameworks, or technologies], I've honed my skills to deliver high-quality code that meets the needs of real-world applications.
 
