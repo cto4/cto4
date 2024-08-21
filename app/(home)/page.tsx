@@ -18,7 +18,7 @@ export const revalidate = 0;
 var page = async ({ searchParams }) => {
   const page = parseInt(searchParams.page ?? 1);
   const sort = ["updated", "title"].includes(searchParams.sort) ? searchParams.sort : "updated";
-  const posts = await pb.collection("posts").getList(page, parseInt(process.env.PER_PAGE ?? "10"), {
+  const posts = await pb.collection("posts").getList(page, parseInt(process.env.POSTS_PER_PAGE ?? "10"), {
     filter: "draft = false",
     fields: "id,banner,title,tags,expand,updated",
     sort: sort == "updated" ? "-updated" : sort,
