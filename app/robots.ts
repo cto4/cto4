@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Googlebot", disallow: "/api/", allow: ["/"] },
       { userAgent: ["Applebot", "Bingbot"], allow: ["/"] },
     ],
-    sitemap: "https://hima-pro.ru/sitemap.xml",
+    sitemap: (process.env.APP_URL ?? "https://hima-pro.ru") + "/sitemap.xml",
   };
 }

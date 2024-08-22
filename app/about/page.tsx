@@ -13,27 +13,21 @@ import {
   Stack,
 } from "@mantine/core";
 import Link from "next/link";
-import { Metadata, ResolvingMetadata } from "next";
 import { Icon } from "@iconify/react";
 
 import me from "#a/images/me.webp";
 import AboutLinks from "./about.json";
 import socials from "#a/res/socials.json";
 import classes from "./styles.module.scss";
+import mkMetaData from "#/lib/utils/mkMetaData";
 import CanvasBG from "#c/CanvasBG";
 import Quote from "./Quote";
 
-export async function generateMetadata(s: any, parent: ResolvingMetadata): Promise<Metadata> {
-  return {
-    title: "About | Hima Pro",
-    description: "Learn about the passion behind us and how we empower our community.",
-    openGraph: {
-      ...(await parent).openGraph,
-      title: "About | Hima Pro",
-      description: "Learn about the passion behind us and how we empower our community.",
-    },
-  };
-}
+export const metadata = mkMetaData({
+  title: "About | Hima Pro",
+  description: "Learn about the passion behind us and how we empower our community.",
+  images: [{ url: me.src }],
+});
 
 const interests = [
   "Learn English",

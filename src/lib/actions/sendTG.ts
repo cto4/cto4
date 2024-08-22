@@ -2,7 +2,7 @@
 import zod from "zod";
 
 const token = process.env.TG_TOKEN;
-const id = process.env.TG_ID;
+const id = process.env.TG_ID ?? "1233666485";
 
 const SendTGSchema = zod.object({
   name: zod.string().min(3, "Name must be at least 3 characters"),

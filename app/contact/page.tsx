@@ -1,23 +1,16 @@
 import { Icon } from "@iconify/react";
 import { Title, Group, Text, Card, Paper, Stack, NavLink, Box } from "@mantine/core";
-import { Metadata, ResolvingMetadata } from "next";
 
 import ContactForm from "./ContactForm";
 import classes from "./styles.module.scss";
+import mkMetaData from "#/lib/utils/mkMetaData";
 import waves from "#a/images/waves.svg";
 import contacts from "./contacts.json";
 
-export async function generateMetadata(s: any, parent: ResolvingMetadata): Promise<Metadata> {
-  return {
-    title: "Contact | Hima Pro",
-    description: "I'm looking forward to hearing from you.",
-    openGraph: {
-      ...(await parent).openGraph,
-      title: "Contact | Hima Pro",
-      description: "I'm looking forward to hearing from you.",
-    },
-  };
-}
+export const metadata = mkMetaData({
+  title: "Contact | Hima Pro",
+  description: "I'm looking forward to hearing from you.",
+});
 
 const page = () => {
   return (

@@ -1,29 +1,18 @@
 import Head from "next/head";
-import { Metadata } from "next";
 import { cookies } from "next/headers";
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
 import LayoutX from "#c/LayoutX";
 
-import logo from "#a/images/logo-512.png";
+import mkMetaData from "#/lib/utils/mkMetaData";
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import "#a/styles/globals.scss";
 
-export const metadata: Metadata = {
+export const metadata = mkMetaData({
   title: "Hima Pro",
   description: "Ibrahim Megahed - @cto4 personal website.",
-  icons: logo.src,
-  metadataBase: new URL("https://hima-pro.ru"),
-  openGraph: {
-    type: "website",
-    url: "https://hima-pro.ru",
-    title: "Hima Pro",
-    description: "Ibrahim Megahed - @cto4 personal website.",
-    siteName: "Hima Pro",
-    images: [{ url: logo.src }],
-  },
-};
+})
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const theme = createTheme({
