@@ -21,7 +21,7 @@ import EmptyBox from "#c/EmptyBox";
 
 export const revalidate = 0;
 
-export async function getPost(postId: string) {
+async function getPost(postId: string) {
   return await new Promise<any>(async (resolve) => {
     try {
       resolve(
