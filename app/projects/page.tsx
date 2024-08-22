@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import { Title, Group, Text, Box, Card, Flex, Divider, NavLink, Button, LoadingOverlay } from "@mantine/core";
+import { ResolvingMetadata, Metadata } from "next";
 import { Icon } from "@iconify/react";
 
 import classes from "./styles.module.scss";
@@ -8,9 +9,17 @@ import GithubAPI from "#/lib/actions/GithubAPI";
 import Controls from "#c/Controls";
 import EmptyBox from "#c/EmptyBox";
 
-export const metadata = {
-  title: "Projects | Hima Pro",
-};
+export async function generateMetadata(s: any, parent: ResolvingMetadata): Promise<Metadata> {
+  return {
+    title: "Projects | Hima Pro",
+    description: "Here are some of my projects that I have worked on.",
+    openGraph: {
+      ...(await parent).openGraph,
+      title: "Projects | Hima Pro",
+      description: "Here are some of my projects that I have worked on.",
+    },
+  };
+}
 
 export const revalidate = 0;
 

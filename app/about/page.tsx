@@ -13,6 +13,7 @@ import {
   Stack,
 } from "@mantine/core";
 import Link from "next/link";
+import { Metadata, ResolvingMetadata } from "next";
 import { Icon } from "@iconify/react";
 
 import me from "#a/images/me.webp";
@@ -22,9 +23,17 @@ import classes from "./styles.module.scss";
 import CanvasBG from "#c/CanvasBG";
 import Quote from "./Quote";
 
-export const metadata = {
-  title: "About | Hima Pro",
-};
+export async function generateMetadata(s: any, parent: ResolvingMetadata): Promise<Metadata> {
+  return {
+    title: "About | Hima Pro",
+    description: "Learn about the passion behind us and how we empower our community.",
+    openGraph: {
+      ...(await parent).openGraph,
+      title: "About | Hima Pro",
+      description: "Learn about the passion behind us and how we empower our community.",
+    },
+  };
+}
 
 const interests = [
   "Learn English",

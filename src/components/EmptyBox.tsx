@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 import pages from "#a/res/pages.json";
 import { useMediaQuery } from "@mantine/hooks";
 
-const EmptyBox = ({ className = null, title = "Empty !", description = "Sorry we didn't posts yet." }) => {
+const EmptyBox = ({ className = null, title = "Empty !", description = "Sorry we didn't post yet." }) => {
   const match = useMediaQuery("(max-width: 767px)");
 
   return (

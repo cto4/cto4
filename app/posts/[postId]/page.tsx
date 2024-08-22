@@ -12,6 +12,7 @@ import {
   Text,
   TypographyStylesProvider,
 } from "@mantine/core";
+import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 
 import pb from "#/lib/db";
@@ -20,17 +21,39 @@ import EmptyBox from "#c/EmptyBox";
 
 export const revalidate = 0;
 
-const page = async ({ params }) => {
-
-  const post = await new Promise<any>(async (resolve) => {
+export async function getPost(postId: string) {
+  return await new Promise<any>(async (resolve) => {
     try {
-      resolve(await pb.collection("posts").getOne(params?.postId, { expand: "author" }));
+      resolve(
+        await pb.collection("posts").getOne(postId, {
+          requestKey: crypto.randomUUID(),
+          expand: "author",
+        })
+      );
     } catch (error) {
-      resolve(error);
+      resolve({ error, ok: false });
     }
   });
+}
 
-  if (post?.status) {
+export async function generateMetadata({ params }, parent: ResolvingMetadata): Promise<Metadata> {
+  const post = await getPost(params.postId);
+  const banner = process.env.POCKETBASE + `/api/files/posts/${post.id}/${post.banner}?thumb=0x200f`;
+  return {
+    title: (post.title ?? "Post not Found") + " | Hima Pro",
+    description: post.title ?? "We can not get requested post. Please visit the other pages to learn more about us.",
+    openGraph: {
+      ...(await parent).openGraph,
+      title: (post.title ?? "Post not Found") + " | Hima Pro",
+      description: post.title ?? "We can not get requested post. Please visit the other pages to learn more about us.",
+      images: [{ url: banner }],
+    },
+  };
+}
+
+const page = async ({ params }) => {
+  const post = await getPost(params.postId);
+  if (post?.ok == false) {
     return <EmptyBox title="Post not Found !" description="Can not get requested post." />;
   }
 
@@ -41,7 +64,7 @@ const page = async ({ params }) => {
     return (
       <EmptyBox
         title="Post is not avilable !"
-        description="Can not view this post now, maybe drafted or moved to another url."
+        description="We can not view this post now, maybe drafted or moved to another url."
       />
     );
   }

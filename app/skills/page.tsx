@@ -1,12 +1,21 @@
 import { Icon } from "@iconify/react";
 import { Card, Group, Stack, Text, Title } from "@mantine/core";
+import { ResolvingMetadata, Metadata } from "next";
 
 import classes from "./styles.module.scss";
 import skills from "./skills.json";
 
-export const metadata = {
-  title: "Skills | Hima Pro",
-};
+export async function generateMetadata(s: any, parent: ResolvingMetadata): Promise<Metadata> {
+  return {
+    title: "Skills | Hima Pro",
+    description: "Here you can see my skills and the software I use usually.",
+    openGraph: {
+      ...(await parent).openGraph,
+      title: "Skills | Hima Pro",
+      description: "Here you can see my skills and the software I use usually.",
+    },
+  };
+}
 
 const page = () => {
   return (

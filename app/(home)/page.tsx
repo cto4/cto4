@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Metadata, ResolvingMetadata } from "next";
 import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import { Anchor, Avatar, Badge, Group, Image, Stack, Text, Title, Box, LoadingOverlay } from "@mantine/core";
@@ -9,9 +10,17 @@ import Controls from "#c/Controls";
 import EmptyBox from "#c/EmptyBox";
 import { CommentsCount } from "#c/Comments";
 
-export const metadata = {
-  title: "Home | Hima Pro",
-};
+export async function generateMetadata(s: any, parent: ResolvingMetadata): Promise<Metadata> {
+  return {
+    title: "Home | Hima Pro",
+    description: "Explore the latest ideas, insights, and innovations on our website.",
+    openGraph: {
+      ...(await parent).openGraph,
+      title: "Home | Hima Pro",
+      description: "Explore the latest ideas, insights, and innovations on our website.",
+    },
+  };
+}
 
 export const revalidate = 0;
 
