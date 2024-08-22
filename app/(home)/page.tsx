@@ -12,7 +12,7 @@ import EmptyBox from "#c/EmptyBox";
 
 export const metadata = mkMetaData({
   title: "Blog | Hima Pro",
-  description: "Explore the latest ideas, insights, and innovations on our website.",
+  description: "Explore the latest ideas, insights, and innovations on my website.",
 });
 
 export const revalidate = 0;

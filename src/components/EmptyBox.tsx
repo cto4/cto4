@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 import pages from "#a/res/pages.json";
 import { useMediaQuery } from "@mantine/hooks";
 
-const EmptyBox = ({ className = null, title = "Empty !", description = "Sorry we didn't post yet." }) => {
+const EmptyBox = ({ className = null, title = "Empty !", description = "Sorry i didn't publish resources yet." }) => {
   const match = useMediaQuery("(max-width: 767px)");
 
   return (
@@ -14,7 +14,7 @@ const EmptyBox = ({ className = null, title = "Empty !", description = "Sorry we
       <Flex className={className} justify="center" align={match ? "start" : "center"} h={match ? "auto" : 400}>
         <div>
           <Title order={2}>{title}</Title>
-          <Text c="dimmed">{description} Please visit the other pages to learn more about us.</Text>
+          <Text c="dimmed">{description} Please visit the other pages to learn more about me.</Text>
           <Divider my={20} />
           <SimpleGrid cols={2}>
             {pages.map((page, index) => (

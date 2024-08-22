@@ -42,7 +42,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   const banner = process.env.POCKETBASE + `/api/files/posts/${post.id}/${post.banner}?thumb=0x200f`;
   return mkMetaData({
     title: (post.title ?? "Post not Found") + " | Hima Pro",
-    description: post.title ?? "We can not get requested post. Please visit the other pages to learn more about us.",
+    description: post.title ?? "Can not get requested post. Please visit the other pages to learn more about me.",
     images: [{ url: banner }],
   });
 }
@@ -60,7 +60,7 @@ const page = async ({ params }) => {
     return (
       <EmptyBox
         title="Post is not avilable !"
-        description="We can not view this post now, maybe drafted or moved to another url."
+        description="Can not view this post now, maybe drafted or moved to another url."
       />
     );
   }

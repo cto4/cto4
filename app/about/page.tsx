@@ -25,7 +25,7 @@ import Quote from "./Quote";
 
 export const metadata = mkMetaData({
   title: "About | Hima Pro",
-  description: "Learn about the passion behind us and how we empower our community.",
+  description: "Learn about the passion behind me and how i empower my community.",
   images: [{ url: me.src }],
 });
 
