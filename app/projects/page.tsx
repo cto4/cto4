@@ -6,12 +6,14 @@ import { Icon } from "@iconify/react";
 import classes from "./styles.module.scss";
 import GithubAPI from "#/lib/actions/GithubAPI";
 import mkMetaData from "#/lib/utils/mkMetaData";
+import banner from "#a/images/banners/projects.svg";
 import Controls from "#c/Controls";
 import EmptyBox from "#c/EmptyBox";
 
 export const metadata = mkMetaData({
   title: "Projects | Hima Pro",
   description: "Here are some of my projects that I have worked on.",
+  images: [{ url: banner.src }],
 });
 
 export const revalidate = 0;

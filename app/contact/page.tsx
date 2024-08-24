@@ -4,12 +4,14 @@ import { Title, Group, Text, Card, Paper, Stack, NavLink, Box } from "@mantine/c
 import ContactForm from "./ContactForm";
 import classes from "./styles.module.scss";
 import mkMetaData from "#/lib/utils/mkMetaData";
+import banner from "#a/images/banners/contact.svg";
 import waves from "#a/images/waves.svg";
 import contacts from "./contacts.json";
 
 export const metadata = mkMetaData({
   title: "Contact | Hima Pro",
   description: "I'm looking forward to hearing from you.",
+  images: [{ url: banner.src }],
 });
 
 const page = () => {

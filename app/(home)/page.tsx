@@ -9,10 +9,12 @@ import mkMetaData from "#/lib/utils/mkMetaData";
 import { CommentsCount } from "#c/Comments";
 import Controls from "#c/Controls";
 import EmptyBox from "#c/EmptyBox";
+import banner from "#a/images/banners/home.svg";
 
 export const metadata = mkMetaData({
   title: "Blog | Hima Pro",
   description: "Explore the latest ideas, insights, and innovations on my website.",
+  images: [{ url: banner.src }],
 });
 
 export const revalidate = 0;
