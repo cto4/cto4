@@ -3,11 +3,11 @@ import { Metadata } from "next";
 import logo from "#a/images/logo-512.png";
 import { OpenGraph } from "next/dist/lib/metadata/types/opengraph-types";
 
-const url = process.env.APP_URL ?? "https://hima-pro.ru";
+const url = process.env.APP_URL ?? "https://codjix.me";
 
 const mkMetaData = ({
-  title = "Hima Pro",
-  description = "Ibrahim Megahed - @cto4 personal website.",
+  title = "Codjix",
+  description = "Ibrahim Megahed - Codjix personal website.",
   images = [{ url: logo.src }],
   extra = null as Metadata,
   og = null as OpenGraph,
@@ -22,7 +22,7 @@ const mkMetaData = ({
     title,
     description,
     type: "website",
-    siteName: "Hima Pro",
+    siteName: "Codjix",
     images,
     ...og,
   },

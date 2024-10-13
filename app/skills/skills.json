@@ -1,20 +1,20 @@
 [
   { "name": "HTML", "icon": "bxl:html5", "description": "HyperText Markup Language" },
-  { "name": "CSS3", "icon": "bxl:css3", "description": "Cascading Style Sheets" },
+  { "name": "CSS", "icon": "bxl:css3", "description": "Cascading Style Sheets" },
   { "name": "JavaScript", "icon": "mdi:language-javascript", "description": "JavaScript is a scripting language" },
   { "name": "Typescript", "icon": "mdi:language-typescript", "description": "A superset of javascript with types" },
   { "name": "SASS", "icon": "fa6-brands:sass", "description": "Syntactically Awesome Style Sheets" },
-  { "name": "ReactJS", "icon": "mdi:react", "description": "A JavaScript framework developed by Facebook" },
+  { "name": "React.js", "icon": "mdi:react", "description": "A JavaScript framework developed by Facebook" },
   { "name": "Docker", "icon": "devicon-plain:docker", "description": "Container-based platform" },
   { "name": "GIT", "icon": "bxl:git", "description": "A distributed version control system" },
   { "name": "VS Code", "icon": "devicon-plain:vscode", "description": "A source-code editor made by Microsoft" },
   { "name": "Debian", "icon": "simple-icons:debian", "description": "A secure and stable linux distro" },
   { "name": "Ubuntu", "icon": "mdi:ubuntu", "description": "A Linux distribution based on Debian" },
   { "name": "Alpine Linux", "icon": "simple-icons:alpinelinux", "description": "A samll and secure linux distro" },
-  { "name": "NodeJS", "icon": "mdi:nodejs", "description": "An asynchronous event-driven JavaScript runtime" },
+  { "name": "Node.js", "icon": "mdi:nodejs", "description": "An asynchronous event-driven JavaScript runtime" },
   { "name": "GoLang", "icon": "fa6-brands:golang", "description": "An open-source programming language supported by Google" },
   { "name": "Postgresql", "icon": "bxl:postgresql", "description": "A reltional database" },
   { "name": "Pocketbase", "icon": "simple-icons:pocketbase", "description": "Realtime backend in 1 file" },
-  { "name": "NextJS", "icon": "devicon-plain:nextjs", "description": "Full-Stack React framework" },
-  { "name": "ViteJS", "icon": "devicon-plain:vitejs", "description": "Next Generation Frontend Tooling" }
+  { "name": "Next.js", "icon": "devicon-plain:nextjs", "description": "Full-Stack React framework" },
+  { "name": "Vite", "icon": "devicon-plain:vitejs", "description": "Next Generation Frontend Tooling" }
 ]

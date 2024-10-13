@@ -2,7 +2,7 @@ const output = process.env.OUTPUT;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output,
+  output: output ?? undefined,
   images: { unoptimized: output == "standalone" },
   sassOptions: {
     prependData: `@import "#a/styles/_mantine.scss";`,

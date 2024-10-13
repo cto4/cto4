@@ -7,10 +7,10 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     scope: "/",
     start_url: "/",
-    name: "Hima Pro",
+    name: "Codjix",
     display: "standalone",
-    short_name: "Hima Pro",
-    description: "Ibrahim Megahed - @cto4 personal website.",
+    short_name: "Codjix",
+    description: "Ibrahim Megahed - Codjix personal website.",
     background_color: "#242424",
     theme_color: "#f08c00",
     orientation: "any",

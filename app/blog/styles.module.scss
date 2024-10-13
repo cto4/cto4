@@ -1,0 +1,32 @@
+.postsContainer {
+  container: posts / inline-size;
+}
+
+.posts {
+  column-count: 2;
+  column-gap: 20px;
+  margin-top: 20px;
+  & .post {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+  }
+  & .banner {
+    width: 100%;
+    object-fit: contain;
+  }
+  & h3,
+  & p {
+    color: var(--mantine-color-text);
+  }
+}
+
+@container posts (width < 767px) {
+  .posts {
+    column-count: 1;
+  }
+  .empty {
+    align-items: start !important;
+    height: auto !important;
+  }
+}

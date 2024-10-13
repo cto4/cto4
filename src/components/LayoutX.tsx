@@ -55,7 +55,7 @@ const LayoutX = ({ children, wideOpen }: { children: React.ReactNode; wideOpen?:
               {wMenu}
               {mMenu}
               <Text component={Link} href="/" size="20px">
-                Hima Pro
+                Codjix
               </Text>
             </Flex>
             <ThemeSwitcher />

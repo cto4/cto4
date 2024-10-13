@@ -1,7 +1,8 @@
 [
-  { "label": "Facebook", "icon": "mdi:facebook", "href": "https://fb.com/cto4ru" },
-  { "label": "Github", "icon": "mdi:github", "href": "https://github.com/cto4" },
+  { "label": "Facebook", "icon": "mdi:facebook", "href": "https://fb.com/codjix" },
+  { "label": "Github", "icon": "mdi:github", "href": "https://github.com/codjix" },
+  { "label": "LinkedIn", "icon": "tabler:brand-linkedin", "href": "https://www.linkedin.com/in/codjix" },
   { "label": "Whatsapp", "icon": "mdi:whatsapp", "href": "https://wa.me/201092726914" },
-  { "label": "Twitter (X)", "icon": "mdi:twitter", "href": "https://x.com/cto4ru" },
-  { "label": "Telegram", "icon": "mdi:telegram", "href": "http://t.me/cto4ru" }
+  { "label": "Twitter (X)", "icon": "mdi:twitter", "href": "https://x.com/codjix" },
+  { "label": "Telegram", "icon": "mdi:telegram", "href": "http://t.me/codjix" }
 ]

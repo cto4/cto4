@@ -20,7 +20,7 @@ const NavBar = ({ menu, close }: NavBarProps) => {
       <AppShell.Section hiddenFrom="sm">
         <Flex h={60} align="center" gap={10}>
           {menu}
-          <Text size="20px">Hima Pro</Text>
+          <Text size="20px">Codjix</Text>
         </Flex>
         <Divider />
       </AppShell.Section>

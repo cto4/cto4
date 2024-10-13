@@ -4,7 +4,7 @@ import { DiscussionEmbed, CommentCount } from "disqus-react";
 const Comments = ({ postId, title }) => {
   return (
     <DiscussionEmbed
-      shortname="hima-pro"
+      shortname="codjix"
       config={{
         url: globalThis?.location?.href,
         identifier: postId,
@@ -17,7 +17,7 @@ const Comments = ({ postId, title }) => {
 export const CommentsCount = ({ postId, title }) => {
   return (
     <CommentCount
-      shortname="hima-pro"
+      shortname="codjix"
       config={{
         url: globalThis?.location?.href,
         identifier: postId,

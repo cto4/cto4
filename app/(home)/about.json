@@ -1,36 +1,36 @@
 [
   {
-    "label": "Studies in Assiut University",
+    "label": "Studies at Arab Open University",
     "title": "My University",
-    "href": "https://maps.app.goo.gl/Z1j6X5qRUgkGF2cR8",
+    "href": "https://maps.app.goo.gl/EG8USRqBA9PTveTPA",
     "desc": "Discover the city where I honed my academic pursuits. Learn more about the institution that shaped my knowledge and skills.",
     "icon": "ph:graduation-cap"
   },
   {
-    "label": "From Egypt, Fayoum",
+    "label": "From Fayoum, Egypt",
     "title": "My Home !",
     "href": "https://maps.app.goo.gl/yuNTBEoPSJdmYJnq6",
     "desc": "Explore the heart of my roots. Uncover the place where I was born and raised, and where cherished memories reside.",
-    "icon": "solar:home-smile-angle-bold-duotone"
+    "icon": "solar:home-smile-outline"
   },
   {
     "label": "tdimdev",
     "title": "My PayPal",
     "href": "https://paypal.me/tdimdev",
     "desc": "Make secure and convenient payments effortlessly. Use PayPal to transact with me quickly and reliably.",
-    "icon": "mdi:paypal"
+    "icon": "hugeicons:paypal"
   },
   {
-    "label": "Lives in Egypt, Assiut",
-    "title": "Where am i",
-    "href": "https://maps.app.goo.gl/K4UWdSRGXvsYLtwH7",
-    "desc": "Get a glimpse into my everyday life. Find out where I currently call home and the inspiring environment that surrounds me.",
-    "icon": "tabler:map-pin"
+    "label": "Connect with me on LinkedIn",
+    "title": "My LinkedIn",
+    "href": "https://www.linkedin.com/in/codjix",
+    "desc": "Stay updated on my professional journey. Connect with me on LinkedIn to explore my career milestones and achievements.",
+    "icon": "tabler:brand-linkedin"
   },
   {
-    "label": "tdim.dev",
+    "label": "admin@codjix.me",
     "title": "My business email",
-    "href": "mailto:tdim.dev@gmail.com",
+    "href": "mailto:admin@codjix.me",
     "desc": "Have a question or inquiry? Send me an email. I'm ready to assist you with your needs and provide expert solutions.",
     "icon": "ph:envelope-simple-duotone"
   },

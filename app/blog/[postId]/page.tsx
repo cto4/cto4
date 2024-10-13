@@ -12,13 +12,13 @@ import {
   Text,
   TypographyStylesProvider,
 } from "@mantine/core";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 
 import pb from "#/lib/db";
+import mkMetaData from "#/lib/utils/mkMetaData";
 import Comments from "#c/Comments";
 import EmptyBox from "#c/EmptyBox";
-import mkMetaData from "#/lib/utils/mkMetaData";
 
 export const revalidate = 0;
 
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   const post = await getPost(params.postId);
   const banner = process.env.POCKETBASE + `/api/files/posts/${post.id}/${post.banner}?thumb=0x200f`;
   return mkMetaData({
-    title: (post.title ?? "Post not Found") + " | Hima Pro",
+    title: (post.title ?? "Post not Found") + " | Codjix",
     description: post.title ?? "Can not get requested post. Please visit the other pages to learn more about me.",
     images: [{ url: banner }],
   });

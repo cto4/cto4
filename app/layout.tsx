@@ -10,8 +10,8 @@ import "@mantine/notifications/styles.css";
 import "#a/styles/globals.scss";
 
 export const metadata = mkMetaData({
-  title: "Hima Pro",
-  description: "Ibrahim Megahed - @cto4 personal website.",
+  title: "Codjix",
+  description: "Ibrahim Megahed - Codjix personal website.",
 })
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

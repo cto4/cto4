@@ -1,95 +1,114 @@
+import {
+  ActionIcon,
+  Anchor,
+  Badge,
+  Card,
+  Text,
+  CardSection,
+  Flex,
+  Group,
+  Image,
+  NavLink,
+  Title,
+  Stack,
+} from "@mantine/core";
 import Link from "next/link";
-import { Suspense } from "react";
-import { redirect } from "next/navigation";
-import { Anchor, Avatar, Badge, Group, Image, Stack, Text, Title, Box, LoadingOverlay } from "@mantine/core";
+import { Icon } from "@iconify/react";
 
-import pb from "#/lib/db";
+import me from "#a/images/me.webp";
+import AboutLinks from "./about.json";
+import socials from "#a/res/socials.json";
 import classes from "./styles.module.scss";
 import mkMetaData from "#/lib/utils/mkMetaData";
-import { CommentsCount } from "#c/Comments";
-import Controls from "#c/Controls";
-import EmptyBox from "#c/EmptyBox";
-import banner from "#a/images/banners/home.svg";
+import CanvasBG from "#c/CanvasBG";
+import Quote from "./Quote";
 
 export const metadata = mkMetaData({
-  title: "Blog | Hima Pro",
-  description: "Explore the latest ideas, insights, and innovations on my website.",
-  images: [{ url: banner.src }],
+  title: "Home | Codjix",
+  description: "Learn about the passion behind me and how i empower my community.",
+  images: [{ url: me.src }],
 });
 
-export const revalidate = 0;
+const interests = [
+  "Learn English",
+  "Swimming",
+  "Studying",
+  "Learn to code",
+  "Learn Russian",
+  "Learn Arabic",
+  "Learn Frinch",
+];
 
-var page = async ({ searchParams }) => {
-  const page = parseInt(searchParams.page ?? 1);
-  const sort = ["updated", "title"].includes(searchParams.sort) ? searchParams.sort : "updated";
-  const posts = await pb.collection("posts").getList(page, parseInt(process.env.POSTS_PER_PAGE ?? "10"), {
-    filter: "draft = false",
-    fields: "id,banner,title,tags,expand,updated",
-    sort: sort == "updated" ? "-updated" : sort,
-    expand: "author",
-  });
-
-  if ((page > posts.totalPages || page < 1) && posts.totalPages != 0) {
-    redirect("/");
-  }
+const page = () => {
+  const viewOnly = ["Facebook", "Twitter (X)", "Telegram", "LinkedIn"];
+  const aboutSocials = socials.filter((link) => viewOnly.includes(link.label));
 
   return (
     <>
-      <Box className={classes.postsContainer}>
-        <Controls
-          sort={sort}
-          page={posts.page}
-          total={posts.totalPages}
-          sorts={[
-            { value: "updated", label: "Updated" },
-            { value: "title", label: "Title" },
-          ]}
-        />
-        {posts?.items.length == 0 && <EmptyBox className={classes.empty} />}
-        <Box className={classes.posts} pos="relative">
-          <Suspense fallback={<LoadingOverlay h={400} visible />}>
-            {posts?.items.map((post, index) => {
-              const author = post.expand.author;
-              const banner = process.env.POCKETBASE + `/api/files/posts/${post.id}/${post.banner}?thumb=0x200f`;
-              const avatar = process.env.POCKETBASE + `/api/files/users/${author.id}/${author.avatar}?thumb=0x50f`;
-              return (
-                <Box className={classes.post} key={index}>
-                  <Anchor component={Link} href={`/posts/${post.id}`} mb={10} underline="never">
-                    <Image radius="lg" alt={post.title} className={classes.banner} src={banner} />
-                  </Anchor>
-                  <Stack gap={5} mt={10}>
-                    <Group gap={10}>
-                      <Text>{post.updated.split(" ")[0]}</Text>
-                      {post.tags?.map((tag: string, index: number) => (
-                        <Badge c="#1a1a1a" key={index} m={0}>
-                          {tag}
-                        </Badge>
-                      ))}
-                      <Badge c="#1a1a1a" m={0}>
-                        <CommentsCount postId={post.id} title={post.title} />
-                      </Badge>
-                    </Group>
-                    <Title order={3} size="md">
-                      {post.title}
-                    </Title>
-                    <Anchor component={Link} href="/about" underline="never">
-                      <Group m={0} align="start">
-                        <Avatar size={45} alt={author.name} src={avatar} />
-                        <Stack gap={0}>
-                          <Text size="md">{author.name}</Text>
-                          <Text c="#b0b0b0" size="sm">
-                            {author.username}
-                          </Text>
-                        </Stack>
-                      </Group>
-                    </Anchor>
-                  </Stack>
-                </Box>
-              );
-            })}
-          </Suspense>
-        </Box>
-      </Box>
+      <Card withBorder shadow="sm">
+        <CardSection>
+          <CanvasBG className={classes.banner} geometry={[1185, 420]} spacing={5} />
+        </CardSection>
+        <div className={classes.user}>
+          <Image src={me.src} alt="Me" />
+          <Stack className={classes.info} gap={5}>
+            <Title order={1} p={0}>
+              Ibrahim Megahed
+            </Title>
+            <Text mb={5}>Software Developer & UI-UX Designer</Text>
+            <Flex>
+              <NavLink
+                active
+                label="Contact"
+                href="/contact"
+                variant="filled"
+                visibleFrom="sm"
+                component={Link}
+                className={classes.mainLink}
+                leftSection={<Icon height="25px" icon="ph:envelope-simple-duotone" />}
+              />
+              <Anchor href="/contact" component={Link} title="Contact me" m="0 5px 0 0" hiddenFrom="sm">
+                <ActionIcon size="40px" variant="default">
+                  <Icon height="25px" icon="ph:envelope-simple-duotone" />
+                </ActionIcon>
+              </Anchor>
+              {aboutSocials.map((social, index) => (
+                <Anchor href={social.href} title={social.label} key={index} style={{ margin: "0 5px" }} target="_blank">
+                  <ActionIcon size="40px" variant="default">
+                    <Icon height="25px" icon={social.icon} />
+                  </ActionIcon>
+                </Anchor>
+              ))}
+            </Flex>
+          </Stack>
+        </div>
+      </Card>
+      <Quote />
+      <Card withBorder shadow="sm" mt={20}>
+        <Group gap="10px">
+          <Icon icon="tabler:star-filled" />
+          {interests.map((skill) => (
+            <Badge size="lg" key={skill} radius="sm">
+              {skill}
+            </Badge>
+          ))}
+        </Group>
+      </Card>
+      <div className={classes.aboutLinks}>
+        {AboutLinks.map((link, index) => (
+          <Anchor href={link.href} target="_blank" key={index} aria-label={link.title} title={link.title}>
+            <Card component={Stack} gap={5} p={20} withBorder shadow="sm" ta="center">
+              <Icon width={80} height={80} style={{ margin: "0 auto" }} icon={link.icon} />
+              <Title order={3} ta="center">
+                {link.label}
+              </Title>
+              <Text c="dimmed" fz="sm" ta="center">
+                {link.desc}
+              </Text>
+            </Card>
+          </Anchor>
+        ))}
+      </div>
     </>
   );
 };

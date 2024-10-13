@@ -6,12 +6,12 @@ import { Icon } from "@iconify/react";
 import classes from "./styles.module.scss";
 import GithubAPI from "#/lib/actions/GithubAPI";
 import mkMetaData from "#/lib/utils/mkMetaData";
-import banner from "#a/images/banners/projects.svg";
+import banner from "#a/images/banners/projects.png";
 import Controls from "#c/Controls";
 import EmptyBox from "#c/EmptyBox";
 
 export const metadata = mkMetaData({
-  title: "Projects | Hima Pro",
+  title: "Projects | Codjix",
   description: "Here are some of my projects that I have worked on.",
   images: [{ url: banner.src }],
 });
@@ -24,7 +24,7 @@ const page = async ({ searchParams }) => {
     ? searchParams.sort
     : "updated";
   const api = await GithubAPI({
-    username: process.env.GH_USER ?? "Hima-Pro",
+    username: process.env.GH_USER ?? "google",
     per_page: parseInt(process.env.PROJECTS_PER_PAGE ?? "10"),
     page,
     sort,

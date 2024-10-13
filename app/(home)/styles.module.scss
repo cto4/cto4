@@ -1,32 +1,83 @@
-.postsContainer {
-  container: posts / inline-size;
+.banner {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
 }
 
-.posts {
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: -90px;
+  padding-left: 50px;
+  padding-top: 20px;
+  gap: 20px;
+  & img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 10px var(--mantine-color-default);
+  }
+  & h1 {
+    font-size: 40px;
+    margin: 10px 0 0 0;
+    color: var(--mantine-color-yellow-filled);
+    text-align: center;
+    @include smaller-than(767px){
+      font-size: 30px;
+      margin: -10px 0 0 0;
+    }
+  }
+  & .mainLink {
+    border-radius: 4px;
+    max-width: fit-content;
+  }
+  .info {
+    display: flex;
+    align-items: flex-start;
+  }
+  @include smaller-than(1024px) {
+    margin-top: -200px;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    .info {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.quote {
+  box-shadow: var(--mantine-shadow-sm);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.aboutLinks {
   column-count: 2;
   column-gap: 20px;
   margin-top: 20px;
-  & .post {
-    margin-bottom: 20px;
-    display: inline-block;
-    width: 100%;
-  }
-  & .banner {
-    width: 100%;
-    object-fit: contain;
-  }
-  & h3,
-  & p {
-    color: var(--mantine-color-text);
-  }
-}
-
-@container posts (width < 767px) {
-  .posts {
+  @include smaller-than(767px){
     column-count: 1;
   }
-  .empty {
-    align-items: start !important;
-    height: auto !important;
+
+  & a {
+    text-decoration: none !important;
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  & a div:hover {
+    border-color: var(--mantine-color-yellow-filled);
+  }
+  & div svg {
+    background: var(--mantine-color-yellow-light);
+    color: var(--mantine-color-yellow-filled);
+    padding: 10px;
+    border-radius: 20px;
   }
 }

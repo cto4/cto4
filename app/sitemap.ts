@@ -5,7 +5,7 @@ export const revalidate = 0;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await pb.collection("posts").getFullList(500, { fields: "id,updated" });
-  const url = (process.env.APP_URL ?? "https://hima-pro.ru")
+  const url = (process.env.APP_URL ?? "https://codjix.me");
   return [
     { url, lastModified: new Date(), changeFrequency: "hourly", priority: 0.8 },
     { url: url + "/about", lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },

@@ -15,8 +15,8 @@ const Footer = () => {
       <Divider />
       <Flex align="center" justify="space-between">
         <Group>
-          <Image h={40} src={logo.src} alt="Hima Pro logo" visibleFrom="sm" />
-          <Title order={3} fz={30} >Hima Pro</Title>
+          <Image h={40} src={logo.src} alt="Codjix logo" visibleFrom="sm" />
+          <Title order={3} fz={30} >Codjix</Title>
         </Group>
         <ActionIconGroup>
           {aboutSocials.map((social, index) => (
@@ -36,7 +36,7 @@ const Footer = () => {
       </Flex>
       <Divider />
       <Flex align="center" justify="space-between">
-        <Text>Copyright &copy; 2019 - {new Date().getFullYear()} Hima-Pro.</Text>
+        <Text>Copyright &copy; 2019 - {new Date().getFullYear()} Codjix.</Text>
         <ThemeSwitcher wide={!match} noLabel />
       </Flex>
     </Stack>
